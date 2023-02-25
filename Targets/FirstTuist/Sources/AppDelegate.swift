@@ -12,12 +12,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = HomeViewController()
+        let viewController = UIViewController()
         viewController.view.backgroundColor = .white
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         FirstTuistKit.hello()
         FirstTuistUI.hello()
+        
+        SomePublicClass.printHello()
+//        SomeInternalClass.printHello() // syntax error
 
         return true
     }
